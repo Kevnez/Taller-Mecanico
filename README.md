@@ -12,7 +12,7 @@ Taller  CesMar
 Es un sistema de gestión de autos en un taller mecánico que permite registrar cada auto que ingresa, buscarlo rápido por su patente, cambiar su estado y ver un reporte ordenado.
 
 # Problema que resuelve
-El Taller Martínez llevaba el control de los autos en reparación en un cuaderno, donde perdían papeles, no sabían qué auto estaba en espera, cuál estaba listo, y cuando un cliente llamaba para preguntar por su auto tenían que buscar hoja por hoja.
+El Taller CesMar llevaba el control de los autos en reparación en un cuaderno, donde perdían papeles, no sabían qué auto estaba en espera, cuál estaba listo, y cuando un cliente llamaba para preguntar por su auto tenían que buscar hoja por hoja.
 
 # Solución propuesta
 
