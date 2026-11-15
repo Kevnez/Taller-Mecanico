@@ -3,7 +3,7 @@ Integrante
 Martínez Kevin
 
 # Nombre del programa
-Taller Martínez
+Taller  Martínez
 
 # Descripcion del proyecto
 Es un sistema de gestión de autos en un taller mecánico que permite registrar cada auto que ingresa, buscarlo rápido por su patente, cambiar su estado y ver un reporte ordenado.
