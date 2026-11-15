@@ -24,7 +24,7 @@ Que nos trabo: me dejé estar porque no tenía con quién avanzar.
 
 Estado: Sin avance.
 
-# Sábado 14/11 (dia 6)- Aviso a la profesora y retomo
+# Sábado 14/11 (dia 6
 Quien hizo que: hoy avisé a la profesora que los integrantes no se habían puesto en contacto y que por eso no habíamos arrancado.La profesora quedó al tanto de la situación.Decido retomar el proyecto por mi cuenta para no quedar sin entrega.
 
 Se creó el repositorio en GitHub Kevnez/Taller-Martinez y el README.md.Completo la bitácora con la situación real.
