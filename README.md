@@ -1,1 +1,36 @@
 # Taller-Martinez
+Integrante
+Martínez Kevin
+
+# Nombre del programa
+Taller Martínez
+
+# Descripcion del proyecto
+Es un sistema de gestión de autos en un taller mecánico que permite registrar cada auto que ingresa, buscarlo rápido por su patente, cambiar su estado y ver un reporte ordenado.
+
+# Problema que resuelve
+El Taller Martínez llevaba el control de los autos en reparación en un cuaderno, donde perdían papeles, no sabían qué auto estaba en espera, cuál estaba listo, y cuando un cliente llamaba para preguntar por su auto tenían que buscar hoja por hoja.
+
+# Solución propuesta
+
+Tema elegido: 
+Clase 10: Mapas
+Se eligió Mapas porque el dominio del problema tiene una clave única natural (la patente), donde se necesita búsqueda directa por esa clave sin recorrer toda la colección, se debe evitar duplicados y se necesita un reporte ordenado, HashMap garantiza búsqueda rápida y TreeMap garantiza orden.
+
+# Herramientas y tecnologías
+Java, GitHub, IntelliJ IDEA
+
+# Enlace del tablero
+https://trello.com/b/KzqhINkf/mi-tablero-de-trello
+
+# Intrucciones para ejecutar
+
+Clonar el repositorio, abrir la carpeta en el IDE, ejecutar Main.java:
+1- Ingresar auto con patente, marca, modelo, dueño y problema.
+2- Buscar auto por patente.Cambiar estado del auto.Listar todos los autos.
+3- Ver reporte ordenado por patente.
+4- Retirar auto.
+El programa avisa cuando la patente ya existe o cuando un dato está mal.
+
+# Estado del proyecto
+En desarrollo - Falta terminar validaciones y pruebas.
