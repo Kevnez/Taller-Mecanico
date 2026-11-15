@@ -19,7 +19,7 @@ El Taller CesMar llevaba el control de los autos en reparación en un cuaderno, 
 Tema elegido: clase 7 (Mapas)
 
 Se eligió Mapas porque el dominio del problema tiene una clave única natural (la patente), donde se necesita búsqueda directa por esa clave sin recorrer toda la colección, se debe evitar duplicados y se necesita un reporte ordenado.
-Se optó por HashMap para  garantizar una búsqueda rápida y TreeMap para garantiza orden.
+Se optó por HashMap para  garantizar una búsqueda rápida y TreeMap para garantizar orden.
 
 # Herramientas y tecnologías
 Java, GitHub, IntelliJ IDEA, Html
