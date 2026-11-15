@@ -1,5 +1,6 @@
 # Taller-Martinez
 Integrante
+
 Martínez Kevin
 
 # Nombre del programa
@@ -13,8 +14,8 @@ El Taller Martínez llevaba el control de los autos en reparación en un cuadern
 
 # Solución propuesta
 
-Tema elegido: 
-Clase 10: Mapas
+Tema elegido: clase 10 (Mapas)
+
 Se eligió Mapas porque el dominio del problema tiene una clave única natural (la patente), donde se necesita búsqueda directa por esa clave sin recorrer toda la colección, se debe evitar duplicados y se necesita un reporte ordenado, HashMap garantiza búsqueda rápida y TreeMap garantiza orden.
 
 # Herramientas y tecnologías
@@ -26,10 +27,15 @@ https://trello.com/b/KzqhINkf/mi-tablero-de-trello
 # Intrucciones para ejecutar
 
 Clonar el repositorio, abrir la carpeta en el IDE, ejecutar Main.java:
+
 1- Ingresar auto con patente, marca, modelo, dueño y problema.
+
 2- Buscar auto por patente.Cambiar estado del auto.Listar todos los autos.
+
 3- Ver reporte ordenado por patente.
+
 4- Retirar auto.
+
 El programa avisa cuando la patente ya existe o cuando un dato está mal.
 
 # Estado del proyecto
