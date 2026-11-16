@@ -12,7 +12,11 @@ Martínez Kevin
 Es un sistema de gestión de autos en un taller mecánico que permite registrar cada auto que ingresa, buscarlo rápido por su patente, cambiar su estado y ver un reporte ordenado.
 
 # Problema que resuelve
-El Taller CesMar llevaba el control de los autos en reparación en un cuaderno, donde perdían papeles, no sabían qué auto estaba en espera, cuál estaba listo, y cuando un cliente llamaba para preguntar por su auto tenían que buscar hoja por hoja.
+En el taller, los autos se anotaban en papel. Eso generaba problemas:
+- Se perdía información del auto y del dueño.
+- Costaba encontrar un auto por su patente.
+- No se sabía en qué estado estaba cada reparación.
+- Había autos duplicados por error.
 
 # Solución propuesta
 
@@ -45,3 +49,5 @@ El programa avisa cuando la patente ya existe o cuando un dato está mal.
 
 # Estado del proyecto
 En desarrollo - Falta terminar validaciones y pruebas.
+## 2. Problema a resolver
+
