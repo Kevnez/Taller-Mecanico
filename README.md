@@ -49,5 +49,5 @@ El programa avisa cuando la patente ya existe o cuando un dato está mal.
 
 # Estado del proyecto
 En desarrollo - Falta terminar validaciones y pruebas.
-## 2. Problema a resolver
+
 
