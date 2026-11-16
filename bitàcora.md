@@ -40,3 +40,11 @@ Estado: En desarrollo, a cargo de un integrante hasta el momento.
 
 Se sumo el integrante Cespedes, Lautaro. El integrante Kevin Martinez realizo los codigos del proyecto, luego el 2do integrante cespedes lautaro anoto las tarjetas en trello sobre como martinnez iba avanzando sobre el analisis
 Luego, cespedes lautaro subio las capturas de los avances y tambien las discripcion en la carpeta llamada "pruebas"
+
+LUNES 16/11 (día 8)
+
+Que nos trabó: Al revisar el README.md en GitHub, en la parte de "Nombre del programa" aparecía "MÁS ALTO: CesMar" en lugar de "Taller CesMar". Cuando entrábamos a editar, el texto estaba bien, pero al salir volvía a aparecer mal.
+
+Que hizo: Kevin revisó el archivo en modo edición y confirmó que el texto original estaba bien escrito: "Taller CesMar". Después indagando nos dimos cuenta que no era un error del archivo, sino del traductor automático del navegador (Edge/Chrome). El traductor pensaba que la página estaba en inglés y traducía la palabra "Taller", que en inglés significa "Más alto". Se desactivó la traducción con "Mostrar original" y el nombre volvió a verse bien.
+
+Estado: README.md revisado y corregido. Se aprendió a diferenciar un error real del archivo de un error de visualización del navegador.
