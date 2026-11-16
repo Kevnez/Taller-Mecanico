@@ -50,7 +50,6 @@ Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando s
 ## 5. Maps que usamos: HashMap y TreeMap
 
 - **HashMap:** Garantiza la búsqueda rápida por patente. Lo usamos para guardar todos los autos. La patente es la clave (`String`) y el auto es el valor (`Auto`).
-```java
 
 
 
