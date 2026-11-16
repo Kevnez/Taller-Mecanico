@@ -18,22 +18,22 @@ El menú desplegable tiene 5 opciones operativas + 1 para salir.
 
 ## 3. Opciones del Menú
 
-### 1 - Ingresar auto (1)
+### 1 - Ingresar auto 
 Despliega por pantalla el pedido de datos. Pide patente, marca, modelo, dueño y problema. Valida que la patente no esté vacía y que no exista ya. Si la patente ya existe, muestra error. Si está todo bien, crea un `new Auto(
 
-### 2 - Buscar y cambiar estado (2)
+### 2 - Buscar y cambiar estado 
 Pide la patente a buscar. Busca en el `HashMap` con `get(patente)`. Si no existe, muestra "No se encontro esa patente". Si existe, muestra sus datos con `mostrarDatos()`, pide el nuevo estado y lo cambia con `setEstado(nuevoEstado)`.
 
-### 3 - Listar todos (3)
+### 3 - Listar todos 
 Despliega por pantalla todos los autos registrados indicando patente, marca, modelo, dueño, problema y estado. Si no hay autos, muestra "No hay autos cargados". Recorre el `HashMap` con `for (Auto a : autos.values())`.
 
-### 4 - Reporte ordenado por patente (4)
+### 4 - Reporte ordenado por patente 
 Despliega por pantalla todos los autos pero ordenados por patente, de menor a mayor. Para lograr el orden, copia el `HashMap` a un `TreeMap` con `new TreeMap<>(autos)` y después lo recorre. Es el mismo listado que el 3, pero ordenado.
 
-### 5 - Retirar auto (5)
+### 5 - Retirar auto 
 Pide la patente a retirar. Busca en el `HashMap` con `remove(patente)`. Si no existe, muestra "No se encontro esa patente". Si existe, muestra sus datos y lo borra del sistema. Después de retirarlo ya no aparece en el listado.
 
-### 6 - Salir (6)
+### 6 - Salir 
 Cierra el flujo del programa y finaliza con el mensaje "Chau!". Cierra el `Scanner` con `sc.close()`.
 
 ## 4. Dónde se validan los datos y dónde se muestran los errores
@@ -52,12 +52,7 @@ Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando s
 - **HashMap:** Garantiza la búsqueda rápida por patente. Lo usamos para guardar todos los autos. La patente es la clave (`String`) y el auto es el valor (`Auto`).
 ```java
 
- Clases
-Auto: Cada auto del taller tiene patente, marca, modelo, dueño, problema y estado.
-El estado empieza en "En espera". Tiene los métodos getPatente(), getEstado(), setEstado() y mostrarDatos().
-Main: es la clase que maneja el taller, tiene el HashMap con todos los autos, muestra el menú, pide los datos con Scanner y ejecuta cada opción con if.
 
-Diagrama de clases
 +---------------------+
 |        Main         |
 +---------------------+
