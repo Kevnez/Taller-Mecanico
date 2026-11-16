@@ -6,16 +6,23 @@ Crear un sistema en Java para gestionar los autos que ingresan a un taller mecá
 - **Usuario / Encargado del taller:** Es la única persona que usa el sistema. Ingresa por el menú, carga autos, los busca y cambia su estado.
 - **Sistema:** Guarda los autos, los busca y muestra la información.
 
-## 3. Requerimientos Funcionales
+## 3. Requerimientos 
 
-| RF1 | El sistema debe mostrar un menú con opciones |
-| RF2 | El sistema debe permitir registrar un auto nuevo con patente, marca, modelo, dueño, problema y estado |
-| RF3 | El sistema no debe permitir registrar dos autos con la misma patente |
-| RF4 | El sistema debe permitir buscar un auto por su patente |
-| RF5 | El sistema debe permitir mostrar todos los autos registrados |
-| RF6 | El sistema debe permitir cambiar el estado de un auto (Ejemplo: En espera, En reparación, Listo) |
-| RF7 | El sistema debe permitir mostrar los datos de un auto |
-| RF8 | El sistema debe permitir salir del programa |
+| RF1 | El sistema debe mostrar un menú con opciones 
+
+| RF2 | El sistema debe permitir registrar un auto nuevo con patente, marca, modelo, dueño, problema y estado 
+
+| RF3 | El sistema no debe permitir registrar dos autos con la misma patente 
+
+| RF4 | El sistema debe permitir buscar un auto por su patente 
+
+| RF5 | El sistema debe permitir mostrar todos los autos registrados 
+
+| RF6 | El sistema debe permitir cambiar el estado de un auto (Ejemplo: En espera, En reparación, Listo) 
+
+| RF7 | El sistema debe permitir mostrar los datos de un auto 
+
+| RF8 | El sistema debe permitir salir del programa 
 
 ## 4. Casos de Uso
 
