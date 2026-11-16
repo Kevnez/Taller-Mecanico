@@ -1,4 +1,5 @@
-1. Clase Auto - Métodos obligatorios
+### 1. Clase Auto - Métodos obligatorios
+
 | Método | ¿Qué hace? | ¿Qué devuelve? |
 | --- | --- | --- |
 | Auto(...) | Constructor. Crea un auto nuevo con todos sus datos. | Crea el objeto |
