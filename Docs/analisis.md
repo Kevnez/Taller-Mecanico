@@ -2,11 +2,11 @@
 ## 1. Objetivo del sistema
 Crear un sistema en Java para gestionar los autos que ingresan a un taller mecánico. El sistema debe permitir registrar autos, buscarlos por patente, cambiar su estado de reparación y mostrar sus datos, de forma rápida y sin que se pierdan los datos.
 
-## 3. Actores
+## 2. Actores
 - **Usuario / Encargado del taller:** Es la única persona que usa el sistema. Ingresa por el menú, carga autos, los busca y cambia su estado.
 - **Sistema:** Guarda los autos, los busca y muestra la información.
 
-## 4. Requerimientos Funcionales
+## 3. Requerimientos Funcionales
 
 | RF1 | El sistema debe mostrar un menú con opciones |
 | RF2 | El sistema debe permitir registrar un auto nuevo con patente, marca, modelo, dueño, problema y estado |
@@ -17,7 +17,7 @@ Crear un sistema en Java para gestionar los autos que ingresan a un taller mecá
 | RF7 | El sistema debe permitir mostrar los datos de un auto |
 | RF8 | El sistema debe permitir salir del programa |
 
-## 6. Casos de Uso
+## 4. Casos de Uso
 
 ### CU1 - Registrar auto
 - **Actor:** Encargado
@@ -38,7 +38,7 @@ Crear un sistema en Java para gestionar los autos que ingresan a un taller mecá
 - **Pasos:** 1. Elige la opción Mostrar todos. 2. El sistema muestra la lista completa.
 - **Si no hay autos:** El sistema muestra "No hay autos registrados".
 
-## 6. Clases
+## 5. Clases
 
 ### Clase Auto
 Es la clase que representa cada auto del taller.
@@ -66,7 +66,7 @@ Usamos `HashMap<String, Auto>` para guardar los autos.
 
 Si usáramos una lista, tendríamos que recorrer auto por auto hasta encontrar la patente, y sería más lento.
 
-## 7. Estados de un Auto
+## 6. Estados de un Auto
 Un auto puede estar en estos estados:
 1. En espera
 2. En reparación
@@ -74,9 +74,18 @@ Un auto puede estar en estos estados:
 
 El estado empieza en "En espera" cuando se registra el auto, y el encargado lo va cambiando con la opción Cambiar estado.
 
-## 9. Flujo del Programa
+## 7. Flujo del Programa
 1. El programa muestra el menú.
 2. El usuario elige una opción.
 3. El programa ejecuta la opción con un `if / else`.
 4. El programa vuelve a mostrar el menú con un `do-while`.
 5. El programa termina solo cuando el usuario elige Salir.
+
+
+## 8. Historia de usuario 
+
+Como encargado:
+Quiero ver qué autos están en el taller, así no busco uno que ya se entregó, que me avise si escribo una patente que ya existe, para no guardar el mismo auto dos veces, que el sistema me busque el auto por la patente, porque si lo busco a mano me tardo un montón como tambien quiero que no me deje cambiar el estado de un auto que no existe, para no cambiarle el estado a otro auto por error.
+
+Como dueño:
+Quiero que el programa no se cierre cuando alguien carga algo mal, porque se perderían los autos que ya estaban registrados.
