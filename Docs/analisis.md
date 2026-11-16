@@ -92,7 +92,9 @@ El estado empieza en "En espera" cuando se registra el auto, y el encargado lo v
 ## 8. Historia de usuario 
 
 Como encargado:
+
 Quiero ver qué autos están en el taller, así no busco uno que ya se entregó, que me avise si escribo una patente que ya existe, para no guardar el mismo auto dos veces, que el sistema me busque el auto por la patente, porque si lo busco a mano me tardo un montón como tambien quiero que no me deje cambiar el estado de un auto que no existe, para no cambiarle el estado a otro auto por error.
 
 Como dueño:
+
 Quiero que el programa no se cierre cuando alguien carga algo mal, porque se perderían los autos que ya estaban registrados.
