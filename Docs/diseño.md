@@ -52,30 +52,25 @@ Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando s
 - **HashMap:** Garantiza la búsqueda rápida por patente. Lo usamos para guardar todos los autos. La patente es la clave (`String`) y el auto es el valor (`Auto`).
 ```java
 
+### Diagrama de clases
 
-+---------------------+
-|        Main         |
-+---------------------+
-| - autos: Map        |
-| - sc: Scanner       |
-+---------------------+
-| + main()            |
-+---------------------+
-         |
-         | usa
-         v
-+---------------------+
-|        Auto         |
-+---------------------+
-| - patente: String   |
-| - marca: String     |
-| - modelo: String    |
-| - duenio: String    |
-| - problema: String  |
-| - estado: String    |
-+---------------------+
-| + getPatente()      |
-| + getEstado()       |
-| + setEstado()       |
-| + mostrarDatos()    |
-+---------------------+
+```mermaid
+classDiagram
+    class Main {
+        -Map~String, Auto~ autos
+        -Scanner sc
+        +main(String[] args)
+    }
+    class Auto {
+        -String patente
+        -String marca
+        -String modelo
+        -String duenio
+        -String problema
+        -String estado
+        +getPatente() String
+        +getEstado() String
+        +setEstado(String estado)
+        +mostrarDatos() void
+    }
+    Main --> Auto : usa / crea
