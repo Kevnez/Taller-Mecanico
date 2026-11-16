@@ -53,14 +53,12 @@ Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando s
 
 
 
+```mermaid
 classDiagram
-    direction TB
     class Main {
         -Map~String, Auto~ autos
         -Scanner sc
         +main(String[] args)
-        +menu con do-while
-        +if / else
     }
     class Auto {
         -String patente
@@ -74,4 +72,4 @@ classDiagram
         +setEstado(String estado)
         +mostrarDatos() void
     }
-    Main --> Auto : usa
+    Main --> Auto : usa / crea
