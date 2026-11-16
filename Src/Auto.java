@@ -1,27 +1,25 @@
-public class Auto {
-    private String patente;
-    private String marca;
-    private String modelo;
-    private String duenio;
-    private String problema;
-    private String estado;
+// 1 - INGRESAR AUTO
+System.out.print("Patente: ");
+String patente = sc.nextLine().toUpperCase();
 
-    public Auto(String patente, String marca, String modelo, String duenio, String problema) {
-        this.patente = patente;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.duenio = duenio;
-        this.problema = problema;
-        this.estado = "En espera";
-    }
+if (patente.isEmpty()) {
+    System.out.println("Error: la patente no puede estar vacia.");
+} else if (autos.containsKey(patente)) {
+    System.out.println("Error: esa patente ya existe.");
+} else {
+    System.out.print("Marca: ");
+    String marca = sc.nextLine();
+    System.out.print("Modelo: ");
+    String modelo = sc.nextLine();
+    System.out.print("Dueño: ");
+    String duenio = sc.nextLine();
+    System.out.print("Problema: ");
+    String problema = sc.nextLine();
 
-    public String getPatente() { return patente; }
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
-
-    public void mostrarDatos() {
-        System.out.println("Patente: " + patente + " | Marca: " + marca + " | Modelo: " + modelo);
-        System.out.println("Dueño: " + duenio + " | Problema: " + problema + " | Estado: " + estado);
-        System.out.println("--------------------");
+    if (marca.isEmpty() || modelo.isEmpty() || duenio.isEmpty() || problema.isEmpty()) {
+        System.out.println("Error: un dato esta mal / vacio.");
+    } else {
+        autos.put(patente, new Auto(patente, marca, modelo, duenio, problema));
+        System.out.println("Auto agregado!");
     }
 }
