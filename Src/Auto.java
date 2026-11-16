@@ -16,15 +16,8 @@ public class Auto {
     }
 
     public String getPatente() { return patente; }
-    public String getMarca() { return marca; }
-    public String getModelo() { return modelo; }
-    public String getDuenio() { return duenio; }
-    public String getProblema() { return problema; }
     public String getEstado() { return estado; }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+    public void setEstado(String estado) { this.estado = estado; }
 
     public void mostrarDatos() {
         System.out.println("Patente: " + patente + " | Marca: " + marca + " | Modelo: " + modelo);
