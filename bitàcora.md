@@ -36,3 +36,7 @@ Que sigue: terminar código base, sus funcionalidades y probar el programa
 
 Estado: En desarrollo, a cargo de un integrante hasta el momento.
 
+# DOMINGO 15/11 (dia 7)
+
+Se sumo el integrante Cespedes, Lautaro. El integrante Kevin Martinez realizo los codigos del proyecto, luego el 2do integrante cespedes lautaro anoto las tarjetas en trello sobre como martinnez iba avanzando sobre el analisis
+Luego, cespedes lautaro subio las capturas de los avances y tambien las discripcion en la carpeta llamada "pruebas"
