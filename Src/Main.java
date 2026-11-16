@@ -1,18 +1,109 @@
-System.out.print("Patente a buscar: ");
-String buscar = sc.nextLine();
-boolean encontrado = false;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
 
-for (Auto a : autos) {
-    if (a.getPatente().equalsIgnoreCase(buscar)) {
-        a.mostrarDatos();
-        System.out.println("Nuevo estado (En espera / En reparacion / Listo): ");
-        String nuevoEstado = sc.nextLine();
-        a.setEstado(nuevoEstado);
-        System.out.println("Estado cambiado a: " + a.getEstado());
-        encontrado = true;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // HashMap para garantizar busqueda rapida por patente
+        Map<String, Auto> autos = new HashMap<>();
+        int opcion = 0;
+
+        while (opcion != 6) {
+            System.out.println("=== TALLER MECANICO ===");
+            System.out.println("1- Ingresar auto con patente, marca, modelo, dueño y problema");
+            System.out.println("2- Buscar auto por patente y cambiar estado del auto");
+            System.out.println("3- Listar todos los autos");
+            System.out.println("4- Ver reporte ordenado por patente");
+            System.out.println("5- Retirar auto");
+            System.out.println("6- Salir");
+            System.out.print("Elegi: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            // 1 - INGRESAR AUTO
+            if (opcion == 1) {
+                System.out.print("Patente: ");
+                String patente = sc.nextLine().toUpperCase();
+                if (patente.isEmpty()) {
+                    System.out.println("Error: la patente no puede estar vacia.");
+                } else if (autos.containsKey(patente)) {
+                    System.out.println("Error: esa patente ya existe.");
+                } else {
+                    System.out.print("Marca: ");
+                    String marca = sc.nextLine();
+                    System.out.print("Modelo: ");
+                    String modelo = sc.nextLine();
+                    System.out.print("Dueño: ");
+                    String duenio = sc.nextLine();
+                    System.out.print("Problema: ");
+                    String problema = sc.nextLine();
+                    if (marca.isEmpty() || modelo.isEmpty() || duenio.isEmpty() || problema.isEmpty()) {
+                        System.out.println("Error: un dato esta mal / vacio.");
+                    } else {
+                        autos.put(patente, new Auto(patente, marca, modelo, duenio, problema));
+                        System.out.println("Auto agregado!");
+                    }
+                }
+            }
+
+            // 2 - BUSCAR Y CAMBIAR ESTADO
+            if (opcion == 2) {
+                System.out.print("Patente a buscar: ");
+                String buscar = sc.nextLine().toUpperCase();
+                Auto encontrado = autos.get(buscar);
+                if (encontrado == null) {
+                    System.out.println("No se encontro esa patente.");
+                } else {
+                    encontrado.mostrarDatos();
+                    System.out.print("Nuevo estado (En espera / En reparacion / Listo): ");
+                    String nuevoEstado = sc.nextLine();
+                    encontrado.setEstado(nuevoEstado);
+                    System.out.println("Estado cambiado a: " + encontrado.getEstado());
+                }
+            }
+
+            // 3 - LISTAR TODOS
+            if (opcion == 3) {
+                if (autos.isEmpty()) {
+                    System.out.println("No hay autos cargados.");
+                } else {
+                    System.out.println("--- LISTA DE AUTOS ---");
+                    for (Auto a : autos.values()) {
+                        a.mostrarDatos();
+                    }
+                }
+            }
+
+            // 4 - REPORTE ORDENADO POR PATENTE
+            if (opcion == 4) {
+                Map<String, Auto> ordenados = new TreeMap<>(autos);
+                if (ordenados.isEmpty()) {
+                    System.out.println("No hay autos para el reporte.");
+                } else {
+                    System.out.println("--- REPORTE ORDENADO POR PATENTE ---");
+                    for (Auto a : ordenados.values()) {
+                        a.mostrarDatos();
+                    }
+                }
+            }
+
+            // 5 - RETIRAR AUTO
+            if (opcion == 5) {
+                System.out.print("Patente a retirar: ");
+                String retirar = sc.nextLine().toUpperCase();
+                Auto sacado = autos.remove(retirar);
+                if (sacado == null) {
+                    System.out.println("No se encontro esa patente.");
+                } else {
+                    System.out.println("Auto retirado:");
+                    sacado.mostrarDatos();
+                }
+            }
+        }
+        System.out.println("Chau!");
+        sc.close();
     }
-}
-
-if (!encontrado) {
-    System.out.println("No se encontro esa patente.");
 }
