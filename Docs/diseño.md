@@ -52,7 +52,7 @@ Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando s
 - **HashMap:** Garantiza la búsqueda rápida por patente. Lo usamos para guardar todos los autos. La patente es la clave (`String`) y el auto es el valor (`Auto`).
 ```java
 
-### Diagrama de clases
+
 
 ```mermaid
 classDiagram
