@@ -48,3 +48,20 @@ Que nos trabó: Al revisar el README.md en GitHub, en la parte de "Nombre del pr
 Que hizo: Kevin revisó el archivo en modo edición y confirmó que el texto original estaba bien escrito: "Taller CesMar". Después indagando nos dimos cuenta que no era un error del archivo, sino del traductor automático del navegador (Edge/Chrome). El traductor pensaba que la página estaba en inglés y traducía la palabra "Taller", que en inglés significa "Más alto". Se desactivó la traducción con "Mostrar original" y el nombre volvió a verse bien.
 
 Estado: README.md revisado y corregido. Se aprendió a diferenciar un error real del archivo de un error de visualización del navegador.
+
+# Creación de Auto.java y Main.java
+
+Misma noche 
+
+**Auto.java:**
+Creamos la clase Auto con patente, marca, modelo, dueño, problema y estado.
+Agregamos los métodos obligatorios: mostrarDatos(), cambiarEstado() y getPatente().
+Entendimos que Auto es el Back-End, donde se guardan los datos.
+
+**Main.java:**
+Creamos el menú principal que ve el usuario (Front-End).
+El menú permite registrar auto, buscar por patente, cambiar estado y listar todos los autos.
+Conectamos Main con Auto usando el HashMap<String, Auto> con la patente como clave.
+Probamos que buscar por patente funciona sin recorrer toda la lista.
+
+**Dificultad:** Al principio no entendíamos cómo conectar Main con Auto, pero después entendimos que Main pide los datos y Auto los guarda.
