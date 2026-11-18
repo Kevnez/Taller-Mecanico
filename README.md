@@ -49,6 +49,6 @@ Clonar el repositorio, abrir la carpeta en el IDE, ejecutar Main.java:
 El programa avisa cuando la patente ya existe o cuando un dato está mal.
 
 # Estado del proyecto
-En desarrollo - Falta terminar validaciones y pruebas.
+En culminación  - proyecto ejecutado con exito en eclipse y falta cargar las pruebas.
 
 
