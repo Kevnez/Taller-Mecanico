@@ -27,7 +27,7 @@ Se eligió Mapas porque el dominio del problema tiene una clave única natural (
 Se optó por HashMap para  garantizar una búsqueda rápida y TreeMap para garantizar orden.
 
 # Herramientas y tecnologías
-Java, GitHub, IntelliJ IDEA, Html
+Java, GitHub, eclipse
 
 # Enlace del tablero
 https://trello.com/b/KzqhINkf/mi-tablero-de-trello
