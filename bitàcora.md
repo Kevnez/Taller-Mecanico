@@ -64,4 +64,5 @@ El menú permite registrar auto, buscar por patente, cambiar estado y listar tod
 Conectamos Main con Auto usando el HashMap<String, Auto> con la patente como clave.
 Probamos que buscar por patente funciona sin recorrer toda la lista.
 
-**Dificultad:** Al principio no entendíamos cómo conectar Main con Auto, pero después entendimos que Main pide los datos y Auto los guarda.
+**Que nos trabo?:** Al principio no entendíamos cómo conectar Main con Auto, pero después entendimos que Main pide los datos y Auto los guarda.
+**Que sigue? ** Ejecutar main java y auto java en eclipse, subir pruebas realizadas y modificar el readme dando la conclusion
