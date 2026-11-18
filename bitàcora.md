@@ -49,9 +49,12 @@ Que hizo: Kevin revisó el archivo en modo edición y confirmó que el texto ori
 
 Estado: README.md revisado y corregido. Se aprendió a diferenciar un error real del archivo de un error de visualización del navegador.
 
+# martes 17/11 (dia 9)
+
+#Que hicimos#
+
 # Creación de Auto.java y Main.java
 
-Misma noche 
 
 **Auto.java:**
 Creamos la clase Auto con patente, marca, modelo, dueño, problema y estado.
