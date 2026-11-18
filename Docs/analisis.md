@@ -2,7 +2,7 @@
 ## 1. Objetivo del sistema
 Crear un sistema en Java para gestionar los autos que ingresan a un taller mecánico. El sistema debe permitir registrar autos, buscarlos por patente, cambiar su estado de reparación y mostrar sus datos, de forma rápida y sin que se pierdan los datos.
 
-## 2. Actores
+## 2. Historias De Usuario
 - **Usuario / Encargado del taller:** Es la única persona que usa el sistema. Ingresa por el menú, carga autos, los busca y cambia su estado.
 - **Sistema:** Guarda los autos, los busca y muestra la información.
 
