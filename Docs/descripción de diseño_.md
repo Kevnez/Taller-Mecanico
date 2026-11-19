@@ -10,15 +10,15 @@ Se detallan la estructura del programa, las opciones del menú, las validaciones
 
 El programa funciona mediante un bucle interactivo `while`, controlado por una variable numérica llamada `opcion`.
 
-Se utiliza la clase `Scanner` para recibir los datos ingresados por el usuario y comunicarse con las funcionalidades de la clase `Main`.
+Se utiliza la clase `Scanner` para recibir los datos ingresados por el usuario.
 
-Las validaciones se realizan mediante estructuras condicionales `if / else if / else` y bloques `try-catch` para manejar posibles excepciones.
+Las validaciones se realizan mediante estructuras condicionales `if` y el método `continue` para volver al menú cuando hay un error.
 
 ## 3. Opciones del menú
 
 El sistema cuenta con seis opciones principales:
 
-1. **Ingresar auto:** permite registrar un vehículo solicitando patente, marca, modelo, dueño y problema. Comprueba que la patente no esté repetida.
+1. **Ingresar auto:** permite registrar un vehículo solicitando patente, marca, modelo, dueño y problema. Comprueba que la patente no esté vacía y que no esté repetida.
 2. **Buscar y cambiar estado:** permite buscar un automóvil mediante su patente, visualizar sus datos y modificar su estado.
 3. **Listar todos:** muestra todos los automóviles registrados con sus respectivos datos.
 4. **Reporte ordenado por patente:** muestra los vehículos ordenados por patente utilizando un `TreeMap`.
@@ -57,13 +57,9 @@ La clase Main utiliza y crea objetos de la clase Auto para gestionar los vehícu
 
 ## 7. Estados de un automóvil
 
-Cada vehículo registrado puede encontrarse en tres estados:
+Cada vehículo registrado arranca con el estado **En espera** cuando se registra.
 
-1. **En espera:** estado inicial que se asigna al registrar un automóvil.
-2. **En reparación:** indica que el vehículo está siendo reparado.
-3. **Listo:** indica que el trabajo sobre el vehículo ha finalizado.
-
-El encargado puede modificar el estado utilizando la opción correspondiente del menú.
+El encargado puede modificar el estado utilizando la opción correspondiente del menú, escribiendo el nuevo estado. Por ejemplo: En espera, En reparación, Listo.
 
 ## 8. Flujo del programa
 
@@ -71,8 +67,8 @@ El funcionamiento general sigue esta secuencia:
 
 1. El programa muestra el menú principal.
 2. El usuario selecciona una opción.
-3. El programa ejecuta la operación correspondiente mediante estructuras `if / else`.
-4. Una vez finalizada la operación, vuelve a mostrar el menú utilizando un bucle `do-while`.
+3. El programa ejecuta la operación correspondiente mediante un `if` por cada opción.
+4. Una vez finalizada la operación, vuelve a mostrar el menú utilizando un bucle `while (opcion != 6)`.
 5. El programa termina únicamente cuando el usuario selecciona la opción Salir.
 
 ## 9. Historias de usuario
