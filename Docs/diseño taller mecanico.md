@@ -1,61 +1,48 @@
 Diseño - Taller Mecánico
 
-En este archivo está el plano del programa: qué clases tiene, cómo funciona el menú y dónde se usan los Maps.
+Acá está el plano del programa: qué clases tiene, cómo funciona el menú y dónde uso los Maps.
 
-1. Estructura de Ejecución (Main.java)
+1. Cómo funciona (Main.java)
 
-El sistema se ejecuta a través de un bucle interactivo `while` controlado por una variable numérica `opcion`. Utiliza la clase `Scanner` para la captura de entradas por consola.
+El programa corre con un `while (opcion != 6)`. Uso `Scanner` para leer lo que escribe el usuario.
 
-La validación se realiza con expresiones lógicas en el `Main` mediante `if`, no mediante el manejo de excepciones con bloques `try-catch`. Cada operación puede mostrar un mensaje de error por pantalla y el menú sigue funcionando.
+Valido todo con `if` en el `Main`. Si algo está mal muestro el mensaje y el menú sigue andando.
 
-1. Cómo funciona el menú (Main.java)
+Todo está adentro de `main()` con un `if` por cada opción. Cuando elegís salir muestra "Chau!" y cierro el Scanner con `sc.close()`.
 
-El menú se repite con un `while (opcion != 6)` hasta que el empleado elige salir. Para leer lo que escribe el empleado usamos `Scanner`. En el `Main` no usamos métodos separados: en cada opción ejecutamos directamente el código de esa opción dentro de un `if`.
+El menú tiene 5 opciones + salir.
 
-Si los datos están mal, mostramos el mensaje y el menú sigue funcionando. Cuando se elige salir, se muestra "Chau!" y se cierra el `Scanner` con `sc.close()`.
+2. Opciones
 
-El menú desplegable tiene 5 opciones operativas + 1 para salir.
+*1 - Ingresar auto*
+Pido patente, marca, modelo, dueño y problema. La patente la paso a mayúsculas con `toUpperCase()`. Si está vacía muestra "Error: la patente no puede estar vacia." Si ya existe muestra "Error: esa patente ya existe." Si está todo bien hago `new Auto(...)` y lo guardo con `autos.put(patente, nuevoAuto)`.
 
-1. Opciones del Menú
+*2 - Buscar y cambiar estado*
+Pido la patente y la paso a mayúsculas. Busco con `get(patente)`. Si es `null` muestra "No se encontro esa patente". Si existe muestro los datos con `mostrarDatos()`, pido el nuevo estado y lo cambio con `setEstado(nuevoEstado)`.
 
-1 - Ingresar auto
-Despliega por pantalla el pedido de datos. Pide patente, marca, modelo, dueño y problema. Valida que la patente no esté vacía y que no exista ya. Si la patente ya existe, muestra error. Si está todo bien, crea un `new Auto(...)` y lo guarda en el `HashMap` con `autos.put(patente, nuevoAuto)`.
+*3 - Listar todos*
+Si no hay autos muestra "No hay autos cargados". Si hay, recorro con `for (Auto a: autos.values())` y muestro cada uno con `mostrarDatos()`.
 
-2 - Buscar y cambiar estado
-Pide la patente a buscar. Busca en el `HashMap` con `get(patente)`. Si no existe, muestra "No se encontro esa patente". Si existe, muestra sus datos con `mostrarDatos()`, pide el nuevo estado y lo cambia con `setEstado(nuevoEstado)`.
+*4 - Reporte ordenado por patente*
+Es el mismo listado pero ordenado por patente. Copio el `HashMap` a un `TreeMap` con `new TreeMap<>(autos)` y lo recorro.
 
-3 - Listar todos
-Despliega por pantalla todos los autos registrados indicando patente, marca, modelo, dueño, problema y estado. Si no hay autos, muestra "No hay autos cargados". Recorre el `HashMap` con `for (Auto a: autos.values())`.
+*5 - Retirar auto*
+Pido la patente y la paso a mayúsculas. Lo saco con `remove(patente)`. Si es `null` muestra "No se encontro esa patente". Si existe muestra "Auto retirado:" y sus datos. Después ya no aparece en el listado.
 
-4 - Reporte ordenado por patente
-Despliega por pantalla todos los autos pero ordenados por patente, de menor a mayor. Para lograr el orden, copia el `HashMap` a un `TreeMap` con `new TreeMap<>(autos)` y después lo recorre. Es el mismo listado que el 3, pero ordenado.
+*6 - Salir*
+Muestra "Chau!" y cierra el Scanner.
 
-5 - Retirar auto
-Pide la patente a retirar. Busca en el `HashMap` con `remove(patente)`. Si no existe, muestra "No se encontro esa patente". Si existe, muestra sus datos y lo borra del sistema. Después de retirarlo ya no aparece en el listado.
+3. Maps que uso
 
-6 - Salir
-Cierra el flujo del programa y finaliza con el mensaje "Chau!". Cierra el `Scanner` con `sc.close()`.
+- *HashMap:* para guardar todos los autos. La clave es la patente (`String`) y el valor es el `Auto`.
+- *TreeMap:* en el reporte, para mostrar todo ordenado por patente.
 
-1. Dónde se validan los datos y dónde se muestran los errores
+4. Clases
 
-Como no usamos excepciones personalizadas, toda la validación se hace con `if` en el `Main`:
+*Main:* tiene `HashMap<String, Auto> autos`, `Scanner sc` y `main(String[] args)`. Ahí está todo el menú.
 
-- *Patente vacía:* Si `patente.isEmpty()` es verdadero, muestra "Error: la patente no puede estar vacia".
-- *Patente repetida:* Si `autos.containsKey(patente)` es verdadero, muestra "Error: esa patente ya existe".
-- *Patente no encontrada:* Si `autos.get(patente)` devuelve `null`, muestra "No se encontro esa patente".
-- *Sin autos cargados:* Si `autos.isEmpty()` es verdadero, muestra "No hay autos cargados".
+*Auto:* tiene patente, marca, modelo, dueño, problema y estado. Tiene el constructor, `mostrarDatos()`, `setEstado(String nuevoEstado)` y `getEstado()`. El estado arranca en "En espera".
 
-Cada error muestra su propio mensaje por pantalla y el menú sigue funcionando sin cortarse.
+Main crea y usa Auto.
 
-1. Maps que usamos: HashMap y TreeMap
 
-- *HashMap:* Garantiza la búsqueda rápida por patente. Lo usamos para guardar todos los autos. La patente es la clave (`String`) y el auto es el valor (`Auto`).
-- *TreeMap:* Lo usamos solo en el reporte. Copia el `HashMap` y lo ordena por patente de menor a mayor.
-
-1. Clases
-
-*Main:* tiene el `HashMap<String, Auto> autos`, el `Scanner sc` y el método `main(String[] args)`. Desde ahí se ejecuta todo el menú.
-
-*Auto:* tiene patente, marca, modelo, dueño, problema y estado. Tiene `getPatente()`, `getEstado()`, `setEstado(String estado)` y `mostrarDatos()`.
-
-Main usa / crea Auto.
